@@ -1,0 +1,131 @@
+{
+  "name": "thai-legal-plugins",
+  "owner": "thaitanalawfirm",
+  "description": "ปลั๊กอินงานกฎหมายไทยสำหรับสำนักงานทนายความ — คลังตัวบทกฎหมาย + 14 ปลั๊กอินงานครอบคลุมตั้งแต่รับเรื่อง ตรวจ conflict ค่าวิชาชีพ ร่างคำคู่ความ บริหารสำนวน ไปจนถึงงานทรัพย์สินทางปัญญา",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "thai-legal-library",
+      "source": "./plugins/thai-legal-library",
+      "description": "คลังตัวบทกฎหมายไทย — ประมวลกฎหมาย พ.ร.บ. กฎหมายลำดับรอง 45 ไฟล์ใน 6 หมวด (ต้องลงคู่กับปลั๊กอินงานทุกตัว)",
+      "version": "1.0.0",
+      "category": "library"
+    },
+    {
+      "name": "thai-litigation-pleadings",
+      "source": "./plugins/thai-litigation-pleadings",
+      "description": "ร่างคำฟ้องและคำให้การ คดีแพ่ง อาญา ผู้บริโภค แรงงาน",
+      "version": "1.0.0",
+      "category": "litigation",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-litigation-motions",
+      "source": "./plugins/thai-litigation-motions",
+      "description": "ร่างคำร้อง คำแถลง อุทธรณ์ ฎีกา และคำคู่ความระหว่างพิจารณา",
+      "version": "1.0.0",
+      "category": "litigation",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-litigation-caseprep",
+      "source": "./plugins/thai-litigation-caseprep",
+      "description": "เตรียมคดี — รวบรวมพยานหลักฐาน บัญชีพยาน บันทึกถ้อยคำ",
+      "version": "1.0.0",
+      "category": "litigation",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-litigation-deadlines",
+      "source": "./plugins/thai-litigation-deadlines",
+      "description": "คำนวณกำหนดเวลาทางคดี อายุความ ระยะอุทธรณ์/ฎีกา (มีสคริปต์ Python ช่วยคำนวณ)",
+      "version": "1.0.0",
+      "category": "litigation",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-client-intake",
+      "source": "./plugins/thai-client-intake",
+      "description": "รับเรื่อง รับฟังข้อเท็จจริงเบื้องต้น คัดกรองความเร่งด่วนของคดี",
+      "version": "1.0.0",
+      "category": "case-management",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-conflict-check",
+      "source": "./plugins/thai-conflict-check",
+      "description": "ตรวจผลประโยชน์ขัดกัน (conflict of interest) ก่อนรับงาน",
+      "version": "1.0.0",
+      "category": "case-management",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-engagement-fees",
+      "source": "./plugins/thai-engagement-fees",
+      "description": "ร่างหนังสือว่าจ้างและกำหนดค่าวิชาชีพ — ตามกรอบมรรยาททนายความ",
+      "version": "1.0.0",
+      "category": "case-management",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-matter-management",
+      "source": "./plugins/thai-matter-management",
+      "description": "บริหารสำนวน — ทะเบียนคดี กำหนดเวลา ติดตามความคืบหน้า",
+      "version": "1.0.0",
+      "category": "case-management",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-legal-opinion",
+      "source": "./plugins/thai-legal-opinion",
+      "description": "ให้ความเห็นทางกฎหมาย — โครงสร้าง legal opinion มาตรฐาน",
+      "version": "1.0.0",
+      "category": "advisory",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-legal-due-diligence",
+      "source": "./plugins/thai-legal-due-diligence",
+      "description": "ตรวจสอบสถานะทางกฎหมาย (Legal DD) สำหรับธุรกรรม M&A สัญญา",
+      "version": "1.0.0",
+      "category": "advisory",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-compliance-audit",
+      "source": "./plugins/thai-compliance-audit",
+      "description": "ตรวจสอบการปฏิบัติตามกฎหมาย — แรงงาน PDPA คุ้มครองผู้บริโภค",
+      "version": "1.0.0",
+      "category": "advisory",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-corporate-secretarial",
+      "source": "./plugins/thai-corporate-secretarial",
+      "description": "งานเลขานุการบริษัท — ประชุมผู้ถือหุ้น/กรรมการ มติ รายงานการประชุม",
+      "version": "1.0.0",
+      "category": "corporate",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-patent",
+      "source": "./plugins/thai-patent",
+      "description": "งานสิทธิบัตร — ร่างคำขอ ตรวจสอบ คัดค้าน",
+      "version": "1.0.0",
+      "category": "ip",
+      "requires": ["thai-legal-library"]
+    },
+    {
+      "name": "thai-trademark",
+      "source": "./plugins/thai-trademark",
+      "description": "งานเครื่องหมายการค้า — ร่างคำขอ ตรวจสอบ คัดค้าน ต่ออายุ",
+      "version": "1.0.0",
+      "category": "ip",
+      "requires": ["thai-legal-library"]
+    }
+  ],
+  "notes": [
+    "ปลั๊กอิน thai-legal-forms (แบบพิมพ์ศาล 116 MB) อยู่ใน GitHub Releases แทน — ขนาดเกิน 100 MB จึงไม่อยู่ใน marketplace นี้",
+    "ดาวน์โหลด thai-legal-forms.skill ได้จาก https://github.com/your-github-username/thai-legal-plugins/releases/latest"
+  ]
+}
