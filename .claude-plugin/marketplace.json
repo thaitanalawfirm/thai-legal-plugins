@@ -1,6 +1,6 @@
-{
-  "name": "thai-legal-plugins",
-  "owner": "thaitanalawfirm",
+"owner": {
+  "name": "thaitanalawfirm"
+}
   "description": "ปลั๊กอินงานกฎหมายไทยสำหรับสำนักงานทนายความ — คลังตัวบทกฎหมาย + 14 ปลั๊กอินงานครอบคลุมตั้งแต่รับเรื่อง ตรวจ conflict ค่าวิชาชีพ ร่างคำคู่ความ บริหารสำนวน ไปจนถึงงานทรัพย์สินทางปัญญา",
   "version": "1.0.0",
   "plugins": [
